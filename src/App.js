@@ -1,25 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import "./app.scss";
+import { Banner } from "./components/Banner/Banner";
+import { Footer } from "./components/Footer/Footer";
+import { Navbar } from "./components/navbar/Navbar";
+import Contact from "./components/contact/Contact";
+import Cursor from "./components/cursor/Cursor";
+import Parallax from "./components/parallax/Parallax";
+import Portfolio from "./components/portfolio/Portfolio";
+import Services from "./components/services/Services";
 
-function App() {
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{background:"#0C0C1D"}} >
+      <Cursor />
+      <section id="Homepage">
+        <Navbar/>
+        <Banner/>
+      </section>
+      <section id="Services">
+        <Parallax type="services" />
+      </section>
+      <section className="service">
+        <Services />
+      </section>
+      <section id="Portfolio">
+        <Parallax type="portfolio" />
+      </section>
+      <Portfolio />
+      <section id="Contact">
+        <Contact />
+      </section>
+    <section className="footer">
+    <Footer/>
+    </section>
     </div>
   );
-}
+};
 
 export default App;
