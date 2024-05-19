@@ -51,7 +51,7 @@ export const Banner = () => {
     <section className="banner" id="home" style={{ padding: '60px 0', textAlign: 'center', backgroundColor: '#f8f9fa' , display:"flex" , justifyContent:"center" , alignItems:"center" }}>
       <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 15px' }}>
         <div className="baner-box" style={{ display: 'flex', flexWrap: 'wrap', margin: '-15px' }}>
-          <div className="box" >
+          <div className="box1" >
             <TrackVisibility>
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn" : ""} style={{ textAlign: 'left' }}>
