@@ -51,7 +51,7 @@ export const Banner = () => {
     <section className="banner" id="home" style={{ padding: '60px 0', textAlign: 'center', backgroundColor: '#f8f9fa' , display:"flex" , justifyContent:"center" , alignItems:"center" }}>
       <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 15px' }}>
         <div className="baner-box" style={{ display: 'flex', flexWrap: 'wrap', margin: '-15px' }}>
-          <div style={{ flex: '0 0 58.333333%', maxWidth: '58.333333%', padding: '15px' }}>
+          <div className="box" >
             <TrackVisibility>
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn" : ""} style={{ textAlign: 'left' }}>
@@ -62,7 +62,7 @@ export const Banner = () => {
               </div>}
             </TrackVisibility>
           </div>
-          <div style={{ flex: '0 0 41.666667%', maxWidth: '41.666667%', padding: '15px' }}>
+          <div className="astronaut">
             <TrackVisibility>
               {({ isVisible }) =>
                 <div className={isVisible ? "animate__animated animate__zoomIn" : ""}>

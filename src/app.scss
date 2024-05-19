@@ -29,6 +29,11 @@ section {
   overflow: hidden;
 }
 
+@mixin minimobile {
+  @media (max-width: 400px) {
+    @content;
+  }
+}
 @mixin mobile {
   @media (max-width: 738px) {
     @content;

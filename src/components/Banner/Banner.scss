@@ -1,3 +1,5 @@
+@import "../../app.scss";
+
 .banner {
     margin-top: 0;
     padding: 260px 0 100px 0;
@@ -5,7 +7,19 @@
     background-position: top center;
     background-size: cover;
     background-repeat: no-repeat;
+
   }
+
+  .box{
+    flex: 0 0 58.333333%;
+    max-width: 58.333333%;
+    padding: 15px;
+
+    @include minimobile {
+      max-width: 90%;
+    }
+  }
+
   .banner .tagline {
     font-weight: 700;
     letter-spacing: 0.8px;
@@ -25,13 +39,23 @@
     line-height: 1;
     margin-bottom: 20px;
     display: block;
+  
+    @include minimobile {
+      font-size: 30px;
+    }
   }
+
+
   .banner p {
     color: #B8B8B8;
     font-size: 18px;
     letter-spacing: 0.8px;
     line-height: 1.5em;
     width: 96%;
+
+    @include minimobile {
+      font-size: 15px;
+    }
   }
   .banner button {
     color: #fff;
@@ -71,10 +95,21 @@
     border-right: 0.08em solid #666;
   }
 
+  .astronaut{
+    flex: 0 0 41.666667%;
+    max-width: 41.666667%;
+    padding: 15px;
+  }
 
   @media only screen and (max-width: 800px) {
     .baner-box{
       flex-direction: column;
       align-items: center;
+    }
+    .box{
+      max-width: 90%;
+    }
+    .astronaut{
+      max-width: unset;
     }
   }
