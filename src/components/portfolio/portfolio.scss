@@ -101,6 +101,8 @@
           padding: 10px;
           width: 200px;
           cursor: pointer;
+          position: relative;
+          z-index: 9;
         }
       }
     }

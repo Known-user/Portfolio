@@ -12,7 +12,7 @@ const items = [
     title: "CINEMATE",
     img:cinemate,
     desc: "Watch movies for free. CINEMATE is an Ad free responsive web application built with the intention of providing  a pleasant anime viewing experience. This is made purely for education purpose. I made this website as my first big project when i was just a beginner in web development.",
-    link: cinemate,
+    link: "https://cinemate-world.netlify.app/",
   },
   {
     id: 2,
