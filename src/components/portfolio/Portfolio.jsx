@@ -5,6 +5,7 @@ import cinemate from "../img/cinemate.png"
 import news from "../img/news.png"
 import anime from "../img/anime.png"
 import medi from "../img/medi.png"
+import textify from "../img/textify.png"
 
 const items = [
   {
@@ -16,24 +17,24 @@ const items = [
   },
   {
     id: 2,
-    title: "ANIME LOVER",
-    img: anime,
-    desc: "Watch Ad-free Anime, Anime Lover is an Ad free responsive web application built with the intention of providing a pleasant anime viewing experience. User can watch anime and can search their favorite anime for free.",
-    link: "https://anime-two-opal.vercel.app/",
-  },
-  {
-    id: 3,
     title: "NewsNow",
     img: news,
     desc: "Welcome to NEWSNOW! This website aims to provide timely and accurate news coverage from around the world.You can browse the website to read the latest news stories and opinion pieces. You can also use the search functionality to find articles on specific topics.",
     link: "https://news-time-ochre.vercel.app/",
   },
   {
-    id: 4,
+    id: 3,
     title: "HealthEase",
     img: medi,
     desc: "HealthEase is a webapp that offers a wealth of information related to different types of diseases, their symptoms, signs, preventions and medications. It provides insure plans and online appointment options too. You can also have a quick health checkup using symptom checker.",
     link: "https://health-ease-rose.vercel.app/",
+  },
+  {
+    id: 4,
+    title: "Textify",
+    img: textify,
+    desc: "Textify is a versatile web application designed to perform various text manipulation and analysis tasks. Developed using JavaScript for functionality and Bootstrap for responsive and attractive design, Textify offers a user-friendly platform where users can input text and apply a wide range of transformations and analyses with ease.",
+    link: "https://text-util-mu.vercel.app/",
   },
 ];
 

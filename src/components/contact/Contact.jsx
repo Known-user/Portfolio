@@ -64,10 +64,10 @@ const Contact = () => {
           <h2>Address</h2>
           <span>New Delhi, India</span>
         </motion.div>
-        <motion.div className="item" variants={variants}>
+        {/* <motion.div className="item" variants={variants}>
           <h2>Phone</h2>
           <span>+1 234 5678</span>
-        </motion.div>
+        </motion.div> */}
       </motion.div>
       <div className="formContainer">
         <motion.div
