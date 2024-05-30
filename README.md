@@ -1,5 +1,5 @@
-# NEWSNOW
-This portfolio is a showcase of [Your Name]'s skills, projects, and professional journey, built to highlight expertise in web development and design. Utilizing React for building interactive and dynamic components, Bootstrap for responsive layout, Sass for advanced CSS styling, and Framer Motion for smooth animations, the portfolio provides an engaging and seamless user experience.
+# Portfolio
+This portfolio is a showcase of my skills, projects, and professional journey, built to highlight expertise in web development and design. Utilizing React for building interactive and dynamic components, Bootstrap for responsive layout, Sass for advanced CSS styling, and Framer Motion for smooth animations, the portfolio provides an engaging and seamless user experience.
 
 WEBSITE LINK: https://abhay-sigma.vercel.app/
 
