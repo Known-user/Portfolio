@@ -3,40 +3,65 @@ import "./portfolio.scss";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import cinemate from "../img/cinemate.png"
 import news from "../img/news.png"
-import anime from "../img/anime.png"
 import medi from "../img/medi.png"
 import textify from "../img/textify.png"
+import thriftbay from "../img/thriftbay.jpeg"
+import otakuverse from "../img/otakuverse.jpeg"
+import todo from "../img/todo.png"
 
 const items = [
   {
     id: 1,
     title: "CINEMATE",
-    img:cinemate,
-    desc: "Watch movies for free. CINEMATE is an Ad free responsive web application built with the intention of providing  a pleasant anime viewing experience. This is made purely for education purpose. I made this website as my first big project when i was just a beginner in web development.",
-    link: "https://cinemate-world.netlify.app/",
+    img: cinemate,
+    desc: "CINEMATE is a fully responsive, ad-free movie and series streaming platform. Built using React, Tailwind CSS, and TMDB API, it offers an intuitive UI with search functionality, infinite scrolling, and YouTube trailers. Developed as a major project to enhance my full-stack skills.",
+    link: "https://cinemate2-0.vercel.app/",
   },
   {
     id: 2,
-    title: "NewsNow",
-    img: news,
-    desc: "Welcome to NEWSNOW! This website aims to provide timely and accurate news coverage from around the world.You can browse the website to read the latest news stories and opinion pieces. You can also use the search functionality to find articles on specific topics.",
-    link: "https://news-time-ochre.vercel.app/",
+    title: "ThriftBay",
+    img: thriftbay,
+    desc: "ThriftBay is an online thrift store marketplace where users can buy and sell second-hand items. Featuring a seamless UI, secure transactions, and product listings, it's built with React, Next.js, and MongoDB.",
+    link: "https://thriftbay.netlify.app/",
   },
   {
     id: 3,
     title: "HealthEase",
     img: medi,
-    desc: "HealthEase is a webapp that offers a wealth of information related to different types of diseases, their symptoms, signs, preventions and medications. It provides insure plans and online appointment options too. You can also have a quick health checkup using symptom checker.",
+    desc: "HealthEase is a healthcare web app offering disease insights, symptom checkers, prevention tips, and medication details. It includes online appointment booking and insurance plans, making it a one-stop health companion.",
     link: "https://health-ease-rose.vercel.app/",
   },
   {
     id: 4,
+    title: "ToDo App",
+    img: todo,
+    desc: "A simple yet efficient ToDo app designed to help users organize tasks seamlessly. Built with React and Tailwind CSS, it features task creation, editing, and deletion with a clean UI for easy task management.",
+    link: "https://todo-brown-one.vercel.app/",
+  },
+  {
+    id: 5,
+    title: "OtakuVerse",
+    img: otakuverse,
+    desc: "OtakuVerse is a dedicated anime and manga discovery platform. Users can explore trending anime, detailed character info, and community reviews. Built with React, Next.js, and the AniList API for a smooth browsing experience.",
+    link: "https://otakuverse-anime.vercel.app/",
+  },
+  {
+    id: 6,
+    title: "NewsNow",
+    img: news,
+    desc: "NewsNow is a modern news platform providing real-time global updates. Users can explore the latest articles, search for specific topics, and read insightful opinion pieces. Built with React and Next.js for a seamless browsing experience.",
+    link: "https://news-time-ochre.vercel.app/",
+  },
+  {
+    id: 7,
     title: "Textify",
     img: textify,
-    desc: "Textify is a versatile web application designed to perform various text manipulation and analysis tasks. Developed using JavaScript for functionality and Bootstrap for responsive and attractive design, Textify offers a user-friendly platform where users can input text and apply a wide range of transformations and analyses with ease.",
+    desc: "Textify is a powerful text manipulation tool that allows users to format, analyze, and transform text effortlessly. Built with JavaScript and Tailwind CSS, it provides an interactive UI with various customization options.",
     link: "https://text-util-mu.vercel.app/",
   },
+  
 ];
+
 
 const Single = ({ item }) => {
   const ref = useRef();
