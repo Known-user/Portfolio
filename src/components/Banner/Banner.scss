@@ -40,8 +40,13 @@
     margin-bottom: 20px;
     display: block;
   
-    @include minimobile {
+    
+    @include mobile {
       font-size: 30px;
+    }
+    
+    @include minimobile {
+      font-size: 25px;
     }
   }
 
@@ -53,8 +58,11 @@
     line-height: 1.5em;
     width: 96%;
 
-    @include minimobile {
+    @include mobile {
       font-size: 15px;
+    }
+    @include minimobile {
+      font-size: 14px;
     }
   }
   .banner button {
@@ -118,7 +126,17 @@
     }
   }
   @media only screen and (max-width: 500px) {
-    .astronaut{
-      max-width: 60%;
+    .astronaut img{
+      max-width: 90% !important;
+      max-height: 40vh !important;
+    }
+
+    .banner{
+      h1{
+        margin-bottom: 10px;
+      }
+      button{
+       margin-top: 10px;
+     }
     }
   }

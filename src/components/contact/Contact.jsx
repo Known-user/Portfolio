@@ -17,6 +17,9 @@ const variants = {
     },
   },
 };
+const serviceId = process.env.REACT_APP_EMAILJS_SERVICE_ID;
+const templateId = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
+const publicKey = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
 
 const Contact = () => {
   const ref = useRef();
@@ -31,18 +34,18 @@ const Contact = () => {
 
     emailjs
       .sendForm(
-        "service_y80oyvz",
-        "template_hx0pqan",
+        serviceId,
+        templateId,
         formRef.current,
-        "GxIdJQtzjVsDuDqFB"
+        publicKey
       )
       .then(
         (result) => {
-          setSuccess(true)
+          setSuccess(true);
         },
         (error) => {
           setError(true);
-        }
+        },
       );
   };
 

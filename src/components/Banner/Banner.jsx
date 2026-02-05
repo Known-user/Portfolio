@@ -57,7 +57,7 @@ export const Banner = () => {
               <div className={isVisible ? "animate__animated animate__fadeIn" : ""} style={{ textAlign: 'left' }}>
                 <span className="tagline"  >Welcome to my Portfolio</span>
                 <h1 style={{color:"white"}} >{`Hi! I'm Abhay`} <span className="txt-rotate" data-rotate='[ "Web Developer", "Web Designer" ]'><span className="wrap">{text}</span></span></h1>
-                  <p >Full-stack web developer skilled in JavaScript, Typescript, React, Next.js, Node.js, Tailwind CSS, and MongoDB. Passionate about building scalable, high-performance web applications with seamless user experiences. Always eager to learn and implement modern technologies to create innovative digital solutions.</p>
+                  <p>Full-stack web developer skilled in JavaScript, Typescript, React, Next.js, Node.js, Tailwind CSS, and MongoDB. Passionate about building scalable, high-performance web applications with seamless user experiences. Always eager to learn and implement modern technologies to create innovative digital solutions.</p>
                   <button ><a style={{display:"flex"}} href="#Contact">Let’s Connect <ArrowRightCircle size={25} /></a>  </button>
               </div>}
             </TrackVisibility>
