@@ -94,33 +94,33 @@ export const Banner = () => {
   const toRotate = ["Web Developer", "Web Designer"];
   const period = 2000;
 
-  const tick = () => {
-    const i = loopNum % toRotate.length;
-    const fullText = toRotate[i];
-    const updatedText = isDeleting
-      ? fullText.substring(0, text.length - 1)
-      : fullText.substring(0, text.length + 1);
-
-    setText(updatedText);
-
-    if (isDeleting) {
-      setDelta((prev) => prev / 2);
-    }
-
-    if (!isDeleting && updatedText === fullText) {
-      setIsDeleting(true);
-      setDelta(period);
-    } else if (isDeleting && updatedText === "") {
-      setIsDeleting(false);
-      setLoopNum((prev) => prev + 1);
-      setDelta(500);
-    }
-  };
-
   useEffect(() => {
+    const tick = () => {
+      const i = loopNum % toRotate.length;
+      const fullText = toRotate[i];
+      const updatedText = isDeleting
+        ? fullText.substring(0, text.length - 1)
+        : fullText.substring(0, text.length + 1);
+
+      setText(updatedText);
+
+      if (isDeleting) {
+        setDelta((prev) => prev / 2);
+      }
+
+      if (!isDeleting && updatedText === fullText) {
+        setIsDeleting(true);
+        setDelta(period);
+      } else if (isDeleting && updatedText === "") {
+        setIsDeleting(false);
+        setLoopNum((prev) => prev + 1);
+        setDelta(500);
+      }
+    };
+
     const ticker = setInterval(tick, delta);
     return () => clearInterval(ticker);
-  }, [text, delta, tick]);
+  }, [text, delta, isDeleting, loopNum]);
 
   return (
     <section
