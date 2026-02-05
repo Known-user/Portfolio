@@ -25,11 +25,3 @@ export const Footer = () => {
   )
 }
 
-
-const textSmEndStyle = {
-  [`@media (minWidth: 576px)`]: {
-    textAlign: 'right'
-  }
-};
-
-
