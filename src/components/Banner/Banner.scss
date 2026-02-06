@@ -125,6 +125,11 @@
       max-width: 60%;
     }
   }
+
+.second-desc{
+  display: none;
+}
+
   @media only screen and (max-width: 500px) {
     .astronaut img{
       max-width: 90% !important;
@@ -138,5 +143,12 @@
       button{
        margin-top: 10px;
      }
+    }
+
+    .first-desc{
+      display: none;
+    }
+    .second-desc{
+      display: block;
     }
   }

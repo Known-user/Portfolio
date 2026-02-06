@@ -43,6 +43,31 @@ const Services = () => {
       desc: "Ensuring WCAG-compliant accessibility to expand reach, improve UX, and meet legal standards.",
     },
   ];
+
+
+  const touchStartX = useRef(0);
+  const touchEndX = useRef(0);
+
+  const handleTouchStart = (e) => {
+    touchStartX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchMove = (e) => {
+    touchEndX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = () => {
+    const diff = touchStartX.current - touchEndX.current;
+
+    if (diff > 50 && active < services.length - 1) {
+      setActive((prev) => prev + 1);
+    }
+
+    if (diff < -50 && active > 0) {
+      setActive((prev) => prev - 1);
+    }
+  };
+
   return (
     <>
       <motion.div
@@ -138,6 +163,9 @@ const Services = () => {
         <div className="carousel">
           <div
             className="carouselTrack"
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
             style={{ transform: `translateX(-${active * 100}vw)` }}
           >
             {services.map((s, i) => (

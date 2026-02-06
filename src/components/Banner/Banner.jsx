@@ -11,7 +11,7 @@ export const Banner = () => {
   const [text, setText] = useState("");
   const [delta, setDelta] = useState(300 - Math.random() * 100);
 
-  const toRotate = ["Web Developer", "Web Designer"];
+  const toRotate = ["Web Developer", "Full Stack Developer"];
   const period = 2000;
 
   useEffect(() => {
@@ -47,7 +47,7 @@ export const Banner = () => {
       className="banner"
       id="home"
       style={{
-        padding: "60px 0",
+        padding: "60px 0 20px 0",
         textAlign: "center",
         backgroundColor: "#f8f9fa",
         display: "flex",
@@ -56,7 +56,10 @@ export const Banner = () => {
       }}
     >
       <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 15px" }}>
-        <div className="baner-box">
+        <div
+          className="baner-box"
+          style={{ display: "flex", flexWrap: "wrap", margin: "-15px" }}
+        >
           <div className="box1">
             <TrackVisibility>
               {({ isVisible }) => (
@@ -64,28 +67,41 @@ export const Banner = () => {
                   className={
                     isVisible ? "animate__animated animate__fadeIn" : ""
                   }
+                  style={{ textAlign: "left" }}
                 >
                   <span className="tagline">Welcome to my Portfolio</span>
                   <h1 style={{ color: "white" }}>
-                    Hi! I'm Abhay{" "}
-                    <span className="txt-rotate">
+                    {`Hi! I'm Abhay`}{" "}
+                    <span
+                      className="txt-rotate"
+                      data-rotate='[ "Web Developer", "Web Designer" ]'
+                    >
                       <span className="wrap">{text}</span>
                     </span>
                   </h1>
-                  <p>
-                    Full-stack web developer skilled in JavaScript, TypeScript,
+                  <p className="first-desc">
+                    Full-stack web developer skilled in JavaScript, Typescript,
                     React, Next.js, Node.js, Tailwind CSS, and MongoDB.
+                    Passionate about building scalable, high-performance web
+                    applications with seamless user experiences. Always eager to
+                    learn and implement modern technologies to create innovative
+                    digital solutions.
+                  </p>
+                  <p className="second-desc">
+                    Full-stack web developer skilled in JavaScript, Typescript,
+                    React, Next.js, Node.js, Tailwind CSS, and MongoDB.
+                    Passionate about building scalable, high-performance web
+                    applications with seamless user experiences.
                   </p>
                   <button>
-                    <a href="#Contact" style={{ display: "flex" }}>
+                    <a style={{ display: "flex" }} href="#Contact">
                       Let’s Connect <ArrowRightCircle size={25} />
-                    </a>
+                    </a>{" "}
                   </button>
                 </div>
               )}
             </TrackVisibility>
           </div>
-
           <div className="astronaut">
             <TrackVisibility>
               {({ isVisible }) => (
@@ -94,7 +110,11 @@ export const Banner = () => {
                     isVisible ? "animate__animated animate__zoomIn" : ""
                   }
                 >
-                  <img src={headerImg} alt="Header Img" />
+                  <img
+                    src={headerImg}
+                    alt="Header Img"
+                    style={{ maxWidth: "100%", height: "auto" }}
+                  />
                 </div>
               )}
             </TrackVisibility>
